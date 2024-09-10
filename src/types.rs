@@ -311,6 +311,7 @@ impl TypesDefinitions {
                         }
 
                         self.definitions.push(syn::parse_quote! {
+                            #[repr(C)]
                             #[allow(unused, non_camel_case_types)]
                             #[derive(Debug, PartialEq, Clone, #bonus_struct_derives)]
                             pub struct #struct_name {
